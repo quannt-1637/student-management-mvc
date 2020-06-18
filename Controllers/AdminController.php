@@ -96,4 +96,17 @@ class AdminController extends Controller
 
         return true;
     }
+
+    public static function destroy()
+    {
+        $id = $_POST['id'];
+        $sql = 'DELETE students, student_subjects
+            FROM students
+            INNER JOIN student_subjects ON students.id = student_subjects.id_student
+            WHERE students.id = ?';
+
+        if (self::deleteStudent($sql, $id)) {
+            echo '<script>alert("Delete successfully!"); window.location.href="./admin";</script>';
+        }
+    }
 }
