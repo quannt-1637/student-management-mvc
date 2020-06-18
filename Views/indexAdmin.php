@@ -32,7 +32,7 @@
                 } ?>
             </td>
             <td class="table-border">
-                <form method="POST" action="delete.php">
+                <form method="POST" action="/delete">
                     <input onclick="window.location = 'edit.php?id=<?php echo $item['id']; ?>'"
                            type="button" value="Edit"/>
                     <input type="hidden" name="id" value="<?php echo $item['id']; ?>"/>

@@ -35,3 +35,9 @@
             AdminController::store();
         }
     );
+
+    Route::set(
+        'delete', function () {
+            AdminController::destroy();
+        }
+    );

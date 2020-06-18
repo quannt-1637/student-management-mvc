@@ -70,4 +70,9 @@ class Database
             }
         }
     }
+
+    function deleteStudent($query, $bindData)
+    {
+        return self::connect()->prepare($query)->execute([$bindData]);
+    }
 }
